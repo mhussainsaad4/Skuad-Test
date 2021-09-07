@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:foreground="?attr/selectableItemBackground"
-    android:background="@drawable/bg_recycler_layout_discovery">
+    android:foreground="?attr/selectableItemBackground">
 
     <ImageView
         android:id="@+id/ivBackground"
@@ -13,8 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_login" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivProfilePic"
@@ -33,7 +31,6 @@
         android:layout_marginStart="16dp"
         android:text="Jane Doe"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/normal_text"
         app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
         app:layout_constraintStart_toEndOf="@+id/ivBackground"
         app:layout_constraintTop_toTopOf="@+id/ivBackground" />
@@ -42,7 +39,6 @@
         android:id="@+id/imageView7"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:src="@drawable/online"
         app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
         app:layout_constraintEnd_toEndOf="@+id/ivBackground" />
 
@@ -54,7 +50,6 @@
         android:visibility="invisible"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/myapp_light_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

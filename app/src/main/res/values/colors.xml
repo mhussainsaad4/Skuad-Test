@@ -10,4 +10,5 @@
 
     <!--    app brand colors-->
     <color name="app_grey_color">#f6f6f6</color>
+    <color name="myapp_light_grey">#f0f0f0</color>
 </resources>

@@ -15,9 +15,11 @@
         android:theme="@style/Theme.SkuadTestApp">
         <activity
             android:name=".search.SearchActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".home.HomeActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.SkuadTestApp.NoActionBar">
             <intent-filter>

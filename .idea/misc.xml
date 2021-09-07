@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.28541666666666665" />
+        <entry key="app/src/main/res/drawable-mdpi/bg_rating.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/drawable/bg_etSeacrh.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/drawable/bg_et_search.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/drawable/bg_etsearch.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2864583333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2864583333333333" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/edit_text_layout.xml" value="0.2703125" />
-        <entry key="app/src/main/res/layout/recycler_layout_home.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/et_search_layout.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/recycler_layout_home.xml" value="0.2642857142857143" />
         <entry key="app/src/main/res/layout/recycler_layout_search.xml" value="0.2703125" />
       </map>
     </option>

@@ -10,10 +10,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-@AndroidEntryPoint
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
-    @Inject
     private lateinit var homeRepository: HomeRepository
 
     init {

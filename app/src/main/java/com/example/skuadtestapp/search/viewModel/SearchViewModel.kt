@@ -10,10 +10,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-@AndroidEntryPoint
 class SearchViewModel(application: Application) : AndroidViewModel(application) {
-    
-    @Inject
+
     private lateinit var searchRepository: SearchRepository
 
     init {

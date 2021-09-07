@@ -6,5 +6,13 @@
     <string name="response_unsuccessful">Unsuccessful Response</string>
     <string name="response_no">No response from Api </string>
 
-
+    <!--    Nearby Layout-->
+    <string name="nearby_etSearch">Search for restaurants, cuisines</string>
+    <string name="nearby_recycler_heading">Ovenstory Pizza</string>
+    <string name="nearby_recycler_sub">Pizza</string>
+    <string name="nearby_recycler_price">$%1d per person</string>
+    <string name="nearby_recycler_rating">4</string>
+    <string name="nearby_recycler_facilities">Well sanitized kitchen * Daily Temperature</string>
+    <string name="nearby_recycler_open">Open Now</string>
+    <string name="nearby_recycler_closed">Closed</string>
 </resources>

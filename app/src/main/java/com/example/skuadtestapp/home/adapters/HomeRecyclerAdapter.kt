@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skuadtestapp.home.callbacks.IHomeRecyclerCallBack
 import android.view.LayoutInflater
 import com.example.skuadtestapp.databinding.RecyclerLayoutHomeBinding
+import com.google.android.material.shape.CornerFamily
 
 
 class HomeRecyclerAdapter(val context: Context, val callback: IHomeRecyclerCallBack) : RecyclerView.Adapter<HomeRecyclerAdapter.MyViewHolder>() {
@@ -42,6 +43,20 @@ class HomeRecyclerAdapter(val context: Context, val callback: IHomeRecyclerCallB
 
         init {
 //            view.subInfo.setOnClickListener(this)
+
+            makeImageViewRounded()
+        }
+
+        private fun makeImageViewRounded() {
+            binding.ivRestaurantPic.setShapeAppearanceModel(
+                binding.ivRestaurantPic.getShapeAppearanceModel()
+                    .toBuilder()
+                    .setTopLeftCorner(CornerFamily.ROUNDED, 21.1f)
+                    .setTopRightCorner(CornerFamily.ROUNDED, 21.1f)
+                    .setBottomLeftCorner(CornerFamily.ROUNDED, 21.1f)
+                    .setBottomRightCorner(CornerFamily.ROUNDED, 21.1f)
+                    .build()
+            )
         }
 
         fun setRowData(position: Int) {
