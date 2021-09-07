@@ -11,19 +11,19 @@ import retrofit2.http.Query
 interface IJsonPlaceHolderApi {
 
     @GET(K.NetworkConstants.NEARBY_API)
-    suspend fun getNearbyRestaurants(
-        @Query("location") location: String = "47.6204,-122.3491",
+    fun getNearbyRestaurants(
+        @Query("location") location: String = "31.476181707050397, 74.28104322630328",
         @Query("radius") radius: String = "2500",
         @Query("type") type: String = "restaurant",
         @Query("key") key: String = "AIzaSyDxVclNSQGB5WHAYQiHK-VxYKJelZ_9mjk"
-    ): Call<NearbyApiModel>
+    ): Call<NearbyApiModel>                 //For using Retrofit Call, don't make these api calls as suspend
 
     @GET(K.NetworkConstants.SEARCH_API)
-    suspend fun getSearchedRestaurants(
-        @Query("location") location: String = "47.6204,-122.3491",
+    fun getSearchedRestaurants(
+        @Query("location") location: String = "31.476181707050397, 74.28104322630328",
         @Query("radius") radius: String = "2500",
         @Query("type") type: String = "restaurant",
-        @Path("keyword") keyword: String,
+        @Query("keyword") keyword: String,
         @Query("key") key: String = "AIzaSyDxVclNSQGB5WHAYQiHK-VxYKJelZ_9mjk"
     ): Call<SearchApiModel>
 }

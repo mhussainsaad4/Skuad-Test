@@ -15,19 +15,21 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class SearchResults (
 
-	@SerializedName("business_status") @Expose val business_status : String,
-	@SerializedName("geometry") @Expose val geometry : Geometry,
-	@SerializedName("icon") @Expose val icon : String,
-	@SerializedName("name") @Expose val name : String,
-	@SerializedName("opening_hours") @Expose val opening_hours : Opening_hours,
-	@SerializedName("photos") @Expose val photos : List<Photos>,
-	@SerializedName("place_id") @Expose val place_id : String,
-	@SerializedName("plus_code") @Expose val plus_code : Plus_code,
-	@SerializedName("price_level") @Expose val price_level : Int,
-	@SerializedName("rating") @Expose val rating : Double,
-	@SerializedName("reference") @Expose val reference : String,
-	@SerializedName("scope") @Expose val scope : String,
-	@SerializedName("types") @Expose val types : List<String>,
-	@SerializedName("user_ratings_total") @Expose val user_ratings_total : Int,
-	@SerializedName("vicinity") @Expose val vicinity : String
+	@SerializedName("business_status") @Expose val business_status: String? = null,
+	@SerializedName("geometry") @Expose val geometry: Geometry? = null,
+	@SerializedName("icon") @Expose val icon: String? = null,
+	@SerializedName("icon_background_color") @Expose val icon_background_color: String? = null,
+	@SerializedName("icon_mask_base_uri") @Expose val icon_mask_base_uri: String? = null,
+	@SerializedName("name") @Expose val name: String? = null,
+	@SerializedName("opening_hours") @Expose val opening_hours: Opening_hours? = null,
+	@SerializedName("photos") @Expose val photos: MutableList<Photos>? = null,
+	@SerializedName("place_id") @Expose val place_id: String? = null,
+	@SerializedName("plus_code") @Expose val plus_code: Plus_code? = null,
+	@SerializedName("price_level") @Expose val price_level: Int? = null,
+	@SerializedName("rating") @Expose val rating: Double? = null,
+	@SerializedName("reference") @Expose val reference: String? = null,
+	@SerializedName("scope") @Expose val scope: String? = null,
+	@SerializedName("types") @Expose val types: MutableList<String>? = null,
+	@SerializedName("user_ratings_total") @Expose val user_ratings_total: Int? = null,
+	@SerializedName("vicinity") @Expose val vicinity: String? = null
 )

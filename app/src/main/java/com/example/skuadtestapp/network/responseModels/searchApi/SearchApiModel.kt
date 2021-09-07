@@ -16,5 +16,5 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class SearchApiModel(
 
     @SerializedName("html_attributions") @Expose val html_attributions: List<String>,
-    @SerializedName("results") @Expose val results: List<SearchResults>
+    @SerializedName("results") @Expose val results: MutableList<SearchResults>
 )

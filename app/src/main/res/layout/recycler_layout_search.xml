@@ -5,53 +5,118 @@
     android:layout_height="wrap_content"
     android:foreground="?attr/selectableItemBackground">
 
-    <ImageView
-        android:id="@+id/ivBackground"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivRestaurantPic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivProfilePic"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:background="@drawable/bg_et_search"
+        android:padding="4dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
-        app:layout_constraintEnd_toEndOf="@+id/ivBackground"
-        app:layout_constraintStart_toStartOf="@+id/ivBackground"
-        app:layout_constraintTop_toTopOf="@+id/ivBackground" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nearby_recycler_heading"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
+        app:layout_constraintTop_toTopOf="@+id/ivRestaurantPic" />
+
+    <TextView
+        android:id="@+id/tvSubHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nearby_recycler_sub"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+    <TextView
+        android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Jane Doe"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
-        app:layout_constraintStart_toEndOf="@+id/ivBackground"
-        app:layout_constraintTop_toTopOf="@+id/ivBackground" />
+        android:layout_marginTop="2dp"
+        android:text="@string/nearby_recycler_price"
+        android:visibility="gone"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubHeading" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
-        app:layout_constraintEnd_toEndOf="@+id/ivBackground" />
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rating"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/nearby_recycler_rating"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivRestaurantPic" />
 
+    <TextView
+        android:id="@+id/tvOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/nearby_recycler_open"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvFacilities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        android:text="@string/nearby_recycler_facilities"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvOpen" />
 
     <View
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:layout_marginStart="16dp"
-        android:visibility="invisible"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/myapp_light_grey"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivBackground" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFacilities" />
 </androidx.constraintlayout.widget.ConstraintLayout>

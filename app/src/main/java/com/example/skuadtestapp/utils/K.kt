@@ -8,7 +8,7 @@ class K {
             //Nearby Api
             const val NEARBY_API = "api/place/nearbysearch/json"
             //Search Api
-            const val SEARCH_API = "api/place/nearbysearch/json/{keyword}"
+            const val SEARCH_API = "api/place/nearbysearch/json"
         }
     }
 }

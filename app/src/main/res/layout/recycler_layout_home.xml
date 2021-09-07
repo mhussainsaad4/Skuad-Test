@@ -12,32 +12,37 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_et_search"
+        android:padding="4dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvHeading"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/nearby_recycler_heading"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
         app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
         app:layout_constraintTop_toTopOf="@+id/ivRestaurantPic" />
 
     <TextView
         android:id="@+id/tvSubHeading"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/nearby_recycler_sub"
         android:textColor="@android:color/darker_gray"
         android:textSize="14sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
         app:layout_constraintStart_toEndOf="@+id/ivRestaurantPic"
         app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
 
@@ -48,6 +53,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:text="@string/nearby_recycler_price"
+        android:visibility="gone"
         android:textColor="@android:color/darker_gray"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -78,6 +84,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:text="@string/nearby_recycler_open"
+        android:visibility="gone"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -90,6 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/nearby_recycler_facilities"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="14sp"

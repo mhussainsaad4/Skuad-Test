@@ -13,10 +13,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Photos (
+data class Photos(
 
-	@SerializedName("height") @Expose val height : Int,
-	@SerializedName("html_attributions") @Expose val html_attributions : List<String>,
-	@SerializedName("photo_reference") @Expose val photo_reference : String,
-	@SerializedName("width") @Expose val width : Int
+    @SerializedName("height") @Expose val height: Int? = null,
+    @SerializedName("html_attributions") @Expose val html_attributions: List<String>? = null,
+    @SerializedName("photo_reference") @Expose val photo_reference: String? = null,
+    @SerializedName("width") @Expose val width: Int? = null
 )

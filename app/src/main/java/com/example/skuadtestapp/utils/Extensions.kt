@@ -5,6 +5,8 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 
 fun Activity.isNetworkAvailable(context: Context): Boolean {
@@ -37,4 +39,15 @@ fun Activity.isNetworkAvailable(context: Context): Boolean {
 
 fun showToast(context: Context, message: String?) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+}
+
+fun manageProgressBar(progressBar: ProgressBar, isVisible: Boolean) {
+    if (isVisible) {
+        progressBar.visibility = View.VISIBLE
+        progressBar.isIndeterminate = true
+    } else {
+        progressBar?.let {
+            it.setVisibility(View.INVISIBLE)
+        }
+    }
 }

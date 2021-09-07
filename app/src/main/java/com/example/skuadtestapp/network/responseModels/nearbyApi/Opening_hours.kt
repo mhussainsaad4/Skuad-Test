@@ -14,6 +14,5 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 
 data class Opening_hours(
-
-    @SerializedName("open_now") @Expose val open_now: Boolean
+    @SerializedName("open_now") @Expose val open_now: Boolean? = null
 )
