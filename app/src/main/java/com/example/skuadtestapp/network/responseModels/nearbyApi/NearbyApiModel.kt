@@ -17,5 +17,5 @@ data class NearbyApiModel (
 
 	@SerializedName("html_attributions") @Expose val html_attributions : List<String>,
 	@SerializedName("next_page_token") @Expose  val next_page_token : String,
-	@SerializedName("results") @Expose  val results : List<Results>
+	@SerializedName("results") @Expose  val results : List<ResultsModel>
 )

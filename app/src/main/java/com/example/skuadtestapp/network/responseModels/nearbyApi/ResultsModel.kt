@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Results (
+data class ResultsModel (
 
 	@SerializedName("business_status") @Expose val business_status : String,
 	@SerializedName("geometry") @Expose val geometry : Geometry,
