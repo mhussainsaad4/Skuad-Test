@@ -3,7 +3,6 @@ package com.example.skuadtestapp.home.viewModel
 import NearbyApiModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
 import com.example.skuadtestapp.home.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect

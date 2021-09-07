@@ -2,6 +2,7 @@ package com.example.skuadtestapp.home.repository
 
 import NearbyApiModel
 import android.content.Context
+import com.example.skuadtestapp.R
 import com.example.skuadtestapp.network.IJsonPlaceHolderApi
 import com.example.skuadtestapp.utils.Functions
 import com.example.skuadtestapp.utils.showToast
@@ -37,13 +38,13 @@ class HomeRepository(val context: Context) {
                                 if (nearbyApiModel != null)
                                     emit(nearbyApiModel)
 
-                            } else showToast(context, "Unsuccessful Response")
+                            } else showToast(context, context.getString(R.string.response_unsuccessful))
                         }
                     }
 
                     override fun onFailure(call: Call<NearbyApiModel>, t: Throwable) {
                         scope.launch {
-                            showToast(context, "No response from Api " + t.message)
+                            showToast(context, context.getString(R.string.response_no) + t.message)
                         }
                     }
 

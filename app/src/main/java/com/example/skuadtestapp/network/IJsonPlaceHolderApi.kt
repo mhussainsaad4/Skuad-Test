@@ -19,7 +19,7 @@ interface IJsonPlaceHolderApi {
     ): Call<NearbyApiModel>
 
     @GET(K.NetworkConstants.SEARCH_API)
-    suspend fun getNearbyRestaurantsSearch(
+    suspend fun getSearchedRestaurants(
         @Query("location") location: String = "47.6204,-122.3491",
         @Query("radius") radius: String = "2500",
         @Query("type") type: String = "restaurant",

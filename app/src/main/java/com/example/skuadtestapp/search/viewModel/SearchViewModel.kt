@@ -1,7 +1,23 @@
 package com.example.skuadtestapp.search.viewModel
 
-import androidx.lifecycle.ViewModel
+import SearchApiModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import com.example.skuadtestapp.search.repository.SearchRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
 
-class SearchViewModel: ViewModel() {
+class SearchViewModel(application: Application) : AndroidViewModel(application) {
+    private lateinit var searchRepository: SearchRepository
 
+    init {
+        searchRepository = SearchRepository(application)
+    }
+
+    suspend fun getSearchedRestaurants(keyword: String): Flow<SearchApiModel> = flow {
+        searchRepository.getSearchedRestaurants(keyword).collect {
+            emit(it)
+        }
+    }
 }
