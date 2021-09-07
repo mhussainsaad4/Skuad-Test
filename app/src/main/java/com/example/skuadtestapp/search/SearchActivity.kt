@@ -1,13 +1,12 @@
-package com.example.skuadtestapp.home
+package com.example.skuadtestapp.search
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.skuadtestapp.R
 
-class HomeActivity : AppCompatActivity() {
+class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_search)
     }
 }
